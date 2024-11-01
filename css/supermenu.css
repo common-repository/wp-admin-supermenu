@@ -1,0 +1,155 @@
+/* wp-admin.css overrides */
+
+#submenu {display: none;}
+#message, div.wrap, #footer {
+	position: relative;
+	z-index: 999;
+	top: 2.5em;
+}
+#moremeta {
+	right: 0;
+}
+#message {
+	margin-top: 5em;
+}
+div.wrap {
+	margin-top: 1.2em;
+}
+
+/* admin supermenu styles */
+
+#adminmenu, #adminmenu * {
+	margin:0;
+	padding:0;
+}
+#adminmenu {
+	background: #83B4D8;
+	border-top: 3px solid #448abd;
+	float: left;
+	line-height:1.0;
+	padding: .2em 0 .3em 2em;
+	margin:0;
+	margin-bottom: 3.5em;
+	position:relative;
+}
+#adminmenu a {
+	color: #000;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+	padding: 3px 5px;
+	border-bottom: none;
+	float: left;
+	/*width:7.45em;*/
+	width:auto;
+}
+#adminmenu li.current > a, #adminmenu li.current > a.current {
+	font-weight: bold;
+	text-decoration: none;
+}
+#adminmenu li.sfHover a {
+	border: none;
+	color: #fff;
+}
+#adminmenu li a.active {
+	background: #0d324f;
+	border-right: 2px solid #4f96c8;
+	border-top: 1px solid #96c0de;
+	color: #fff;
+	padding-bottom: 4px;
+}
+#adminmenu ul {
+	background: #0d324f; /*IE6 needs this*/
+	border-bottom: none;
+	margin: 0;
+	padding: 3px 2em 0 3em;
+	float: left;
+	position:relative;
+}
+	#adminmenu ul.current a.current {
+		background: #f9fcfe;
+		border-top: 1px solid #045290;
+		border-right: 2px solid #045290;
+		color: #000;
+		margin-top: -1px;
+	}
+	#adminmenu li {
+		float: left;
+		line-height: 200%;
+		list-style:none;
+		text-align: center;
+		white-space: nowrap;
+		z-index:999;
+		line-height: 180%;
+		height: 30px;
+		}
+		#adminmenu li.sfbreadcrumb li a, #adminmenu li.sfHover li a {
+			color: #fff;			
+			font-size: 12px;
+		}
+#adminmenu li.sfHover a:hover, #adminmenu li.sfbreadcrumb li a:hover, #adminmenu li.sfHover li a:hover {
+			color: #333;
+		}
+		#adminmenu li.sfHover a.current:hover {
+			color: #fff;
+		}
+		#adminmenu li.sfHover li a.current:hover {
+			color: #000;
+			cursor: default;
+		}
+		#adminmenu li:hover ul, /* pure CSS hover is removed below */
+		ul#adminmenu li.sfHover ul {
+			top:2.5em;
+		}
+	#adminmenu li ul {
+		left:0;
+		top:-999em;
+		position:absolute;
+	/*	width:48em;*/
+		width:100%;
+		background: #0d324f;
+	}
+	#adminmenu li:hover li ul,
+	#adminmenu li.sfHover li ul {
+		top:-999em;
+	}
+	#adminmenu li li {
+		background:#0D324F;
+		position: relative; /* this makes the vertical third tiers line up under their parent li */
+	}
+	#adminmenu li li:hover ul, /* pure CSS hover is removed below */
+	ul#adminmenu li li.sfHover ul {
+		top:2.5em;
+	}
+	#adminmenu li li ul {
+		/*width:9.45em;*/
+		width:auto;
+	}
+		#adminmenu li li:hover li ul,
+		#adminmenu li li.sfHover li ul {
+			top:-999em;
+		}
+		#adminmenu li li li {
+			/* only the css below this point (plus the line indicated a couple lines up from here) was added to turn the 3-tiered horizontal menu into the Richard Willis menu */
+			float: left;
+			/*width:9.45em;*/
+			width:auto;
+			left: -1px;
+		}
+		#adminmenu li li li:hover ul, /* pure CSS hover is removed below */
+		ul#adminmenu li li li.sfHover ul {
+			top:2.5em;
+		}		
+			#adminmenu li li li a {
+				float: none;
+			}
+
+
+/*following rule negates pure CSS hovers
+so submenu remains hidden and JS controls
+when and how it appears*/
+.superfish li:hover ul,
+.superfish li li:hover ul,
+.superfish li li li:hover ul {
+	top: -999em;
+}
